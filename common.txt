@@ -1,0 +1,1326 @@
+
+
+http://internal-lb-appe-gt-data-import-handler-p-928537414.eu-west-1.elb.amazonaws.com/
+
+http://internal-lb-appe-gt-data-import-handler-d-1253127555.eu-west-1.elb.amazonaws.com/
+ 
+http://internal-gt-solr-index-manager-v2-1644294584.eu-west-1.elb.amazonaws.com/solrapi/login  -> dev Dashbord new
+
+https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#logsV2:log-groups/log-group/$252Fecs$252Fgt-solr-data-import-handler-task-p/log-events/ecs$252Fgt-solr-data-import-handler-task-p$252Fdb2b3f6fe9f647aa8984e8b8c8e13f43
+
+
+
+http://10.3.104.26:8983/solr/#/live-gt-details  -> old prod url
+
+http://10.1.104.51:8983/solr/#/ -> old dev url
+
+
+https://informa.awsapps.com/start#/
+
+
+{'collectionType'
+:
+'GT_DETAILS_PERSON_FULLIMPORT'}    12:01:04 to 17:28:36
+
+"/get-fullimport-status",
+"/get-deltaimport-status",
+-----------------------------------------------------------------------------------------------------------------------------------
+{'delete': {'query': 'IMPRESSION_ID:(354645 OR 496217 OR 845545) AND -CONTENT_EXIST:*'}}		
+
+Inside Zookeeper zoo.cfg there should be interconnectivity | samaj 
+	->server.1=localhost:2881:3881
+	->server.2=localhost:2882:3882
+	->server.3=localhost:2883:3883
+
+'OACOLL' /*Open Access Collection*/
+
+To Start zookeeper :
+	Go to ->
+		-> C:\ApacheSolrZoo\apache-zookeeper-3.6.2-1-bin\bin
+			-> cmd above and right commond inside : zkserver
+				-> server will start |  similarly do same for other 3 server 
+				
+To Change some configuration :
+	Go to ->
+		-> C:\ApacheSolrZoo\apache-zookeeper-3.6.2-1-bin\conf\zoo.cfg
+	
+publishing domain
+	
+TO Run Apache Solr :
+	Go to ->
+		-> C:\ApacheSolrZoo\solr-8.7.0
+			-> cmd above and right command inside : bin\solr.cmd -cloud -s solr-cloud-home\node1\solr -p 8484 -z "localhost:2181,localhost:2182,localhost:2183"
+				-> server will start | similarly do same for other 3 server 
+
+To change the aws expired session
+	Go to ->
+			-> https://informa.awsapps.com/start#/ 
+				-> Then Go to command line -> windows the second option copy that text(session)
+	193362				-> Then Go to D:\Users\DasJ\.aws\credential.txt and past it here
+				
+/admin/collections?action=CREATE&name=testjis&numShards=number&replicationFactor=number&maxShardsPerNode=1&createNodeSet=nodelist&collection.configName=configname
+
+http://solr-zookeeper-d.eu-west-1.elasticbeanstalk.com/solr/content_events
+
+Gradlew clean build
+
+
+Check logs C:\projects\ces-solr-data-migration-utility\build\libs\logs
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+How to raise aws ticket :
+Go to ->
+	https://informa.service-now.com/iportal?id=home
+Then Go to ->
+	something broken -> then select the option and create ticket
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://informaplc.sharepoint.com/sites/ProductContentTechnologyTeamsPublic/Shared%20Documents/Forms/AllItems.aspx?viewid=e7d3ddb1%2D4d81%2D4e82%2D8274%2Dd31749c2ab51&id=%2Fsites%2FProductContentTechnologyTeamsPublic%2FShared%20Documents%2FDragons
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+aws sso login --profile default
+
+
+terraforms:
+
+Create a new collection :
+http://localhost:8484/solr/admin/collections?action=CREATE&name=beta-gt&numShards=6&replicationFactor=3&maxShardsPerNode=3&router.name=implicit&shards=shard-1,shard-4,shard-6
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+jishnu.das@necsws.com
+P2918
+
+{
+     "name": "EXTERNAL_IMPRESSION_ID",
+     "type": "string",
+     "indexed": "true",
+     "stored": "true"
+}
+new Aws
+
+-------------------------------------------------------------------------------------------
+
+
+"add-field": {
+    "name": "IndexedDate",
+    "type": "pdate",
+    "stored": true,
+    "required": true, 
+    "indexed": true,
+    "docValues": true,
+    "multiValued": false,
+	"default": "NOW"
+  }
+  
+  TF_SOLR_IDX2
+  p7Zb8eGy3C5zK9JXhFB
+  
+  TF_SOLR_USER
+  yumpingy4ck
+------------------------------------------------------------------------------------------------------
+
+	These are the steps that I do for that, though using command line interface.
+  
+  Checkout dev branch (git checkout dev)
+  Get the latest of dev branch (git pull)
+  Checkout branch B (git checkout B)
+  Merge dev branch to branch B (git merge dev)
+  You can follow these steps using your github desktop.
+	
+  after stash
+  git merge develop-ecs -> for discovery
+  
+  git stash list
+  git stash apply "stash@{0}"
+
+  bau
+  
+  https://javaconceptoftheday.com/java-8-stream-intermediate-and-terminal-operations/
+  https://www.hireitpeople.com/resume-database/64-java-developers-architects-resumes/39223-sr-java-technical-lead-resume-profile
+  
+Controller se service me jata he thabi hikariii pool for database chalu hota he 
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+control + shift + n -> to file search
+control + alt + left -> go back 
+ctrl+ alt + l ---> beutify
+
+----------------------------------------------------------
+Terraform command
+
+Go to the particular folder path inisde terraform
+add aws credentials
+terraform init -> for initilalization
+
+terraform plan -var-file dev/values.tfvars
+
+terraform apply -var-file dev/values.tfvars
+
+---------------------------------------
+Status check for dev solr
+
+http://internal-alb-euw1-ap-pe-gt-solrv2-d-1420889530.eu-west-1.elb.amazonaws.com/solr/#/gt-index-status/query?q=collectionType:%20GT_BY_MODIFIED_ON&q.op=OR&sort=IndexedDate%20desc
+
+cloud watch :
+
+https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#logsV2:log-groups/log-group/$252Fecs$252Fgt-solr-data-import-handler-task-d/log-events/ecs$252Fgt-solr-data-import-handler-task-d$252F222efdbd853f42f6adf68fa829018bb5
+
+
+
+J@@shnu@12345
+
+  - stage: Test
+    name: Runs tests and Sonar analysis
+    script:
+      - "./gradlew sonarqube || travis_terminate 1"
+
+ping hostname will give you address
+
+
+----------------------------------------------
+
+
+git stash apply stash@{0}
+
+
+--------------------------------------------------------------------
+
+EC2 linux command to check logs
+
+i-088323cdd013246fd -> dev
+i-0cbde9d89cac0b655 -> prod
+sudo -s -> gets permission to execute
+docker ps
+docker exec -it theIDAbove bash
+cd /opt/logs
+ls for checking whats there in folder
+
+tail -f gt-solr-dataimporthandler.log
+
+sudo -s
+docker ps
+docker exec -it abe0485a35b7 bash
+cd /opt/logs/
+tail -f gt-solr-dataimporthandler.log
+tail -n 10000 gt-solr-dataimporthandler.log
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+collectionType:GT_DETAILS_PRICE_BY_MODIFIED_ON AND  IndexedDate : [2023-01-31T08:00:00.000Z TO 2023-01-31T14:00:00.000Z] AND status : SUCCESS
+
+CONTENT_EXIST:* AND INDEX_DATE :[2022-01-01T00:00:00Z TO NOW]
+
+collectionType: GT_BY_MODIFIED_ON AND IndexedDate : [2023-08-23T00:00:00.000Z TO 2023-08-23T23:59:00.000Z]
+
+IMPRESSION_ID:[* TO 540000]
+IMPRESSION_ID:(123 OR 134)
+collectionType : GT_BY_MODIFIED_ON
+
+<delete><query>id:c18d2e5d-ef8b-47cb-9ab5-67e7bfd5b1d2</query></delete>
+npspostgres123!
+ 
+
+cloud watch search ::::::::
+/ecs/gt-solr-data-import-handler-task-
+
+collectionType: GT_DETAILS_PRICE_BY_MODIFIED_ON AND IndexedDate:[2023-01-19T00:00:00.000Z TO 2023-01-19T04:05:44.007Z] 
+AND status : SUCCESS AND noOfRecordsProcessed:[1 TO 100000]
+
+batchId:f11c320c-ff39-4a10-9d66-e0c8a18ec12a AND status:SUCCESS
+
+http://internal-alb-euw1-ap-pe-gt-solrv2-p-1627249777.eu-west-1.elb.amazonaws.com/solr/gt-index-status/select?fl=impression_id&q.op=OR&q=collectionType%3AGT_BY_MODIFIED_ON%20AND%20IndexedDate%20%3A%20%5B2023-02-27T00%3A00%3A00.000Z%20TO%202023-02-28T24%3A00%3A00.000Z%5D%20AND%20status%20%3A%20SUCCESS&rows=500&wt=csv
+
+Username : IndexManagerAdmin 
+Password : admin@12345
+
+gtsolrv2
+
+http://gt-solrv2-p.ap.corplan.net/solr/live-gt
+
+http://internal-lb-appe-gt-data-import-handler-p-928537414.eu-west-1.elb.amazonaws.com/indexGtFullImport
+
+http://internal-lb-appe-gt-data-import-handler-d-1253127555.eu-west-1.elb.amazonaws.com/indexGtFullImport
+ 
+http://internal-gt-solr-index-manager-v2-1644294584.eu-west-1.elb.amazonaws.com/solrapi/login  -> dev Dashbord new
+
+https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#logsV2:log-groups/log-group/$252Fecs$252Fgt-solr-data-import-handler-task-p/log-events/ecs$252Fgt-solr-data-import-handler-task-p$252Fdb2b3f6fe9f647aa8984e8b8c8e13f43
+
+status : SUCCESS and collectionType: GT_BY_MODIFIED_ON and noOfRecordsProcessed:[1 TO 100000]
+
+sudo -s
+docker s
+ls
+index-mager >  status  >  
+
+GtDataSyncFieldsUtilsImpl
+
+V1
+
+cd /opt/solr/solr-6.6.4/server/logs
+
+Missing impression_ID : S3 : s3-euw1-ap-pe-ws4-gt-solr-indexing-config-dev
+
+http://internal-alb-euw1-ap-pe-gt-solrv2-p-1627249777.eu-west-1.elb.amazonaws.com/solr/gt-index-status/select?fl=startTime%2CcollectionType%2Cstatus&q.op=OR&q=collectionType%3AGT_BY_MODIFIED_ON&sort=IndexedDate%20desc
+
+
+{"totalNoOfRecords":0,"indexedDateTime":"2023-09-20 18:15:58","type":"GT_DETAILS_CATCHWORD_BY_MODIFIED_ON","status":"FAILED"}
+	GT_DETAILS_DELETE_ENTITY,
+	GT_BY_MODIFIED_ON,
+	GT_DETAILS_CATCHWORD_BY_MODIFIED_ON,
+	GT_DETAILS_LOCATION_BY_MODIFIED_ON,
+	GT_DETAILS_PRICE_BY_MODIFIED_ON,
+	GT_DETAILS_PERSON_BY_MODIFIED_ON,
+	GT_DETAILS_CLASSIFICATION_BY_MODIFIED_ON,
+	GT_DETAILS_CONTENT_EXIST_BY_MODIFIED_ON,
+	
+	
+	
+	ECS Solr -->  EUW1APPEWS4GTSOLRV2D1
+	
+
+	
+	
+	
+http://gt-solrv2-p.ap.corplan.net/solr/live-gt/select?fl=DAC_KEY&fq=STATUS%3A%22Available%22&fq=TYPE%3A%22EBK%22&q.op=AND&q=TEXT_TYPE_DESC%3A%22SPIBs%22&wt=csv&rows=5000
+	
+http://gt-solrv2-p.ap.corplan.net/solr/#/
+
+http://(gt-solrv2-p).ap.corplan.net/solr/#/
+loadbalancer
+
+gt-solrv2-p -> prod
+gt-solrv2-d -> dev
+
+sudo su -    -> when was last ec2 opened 
+
+stop cmd
+cd /opt/solr && apache-zookeeper-3.7.0-bin/bin/zkServer.sh stop && solr-8.9.0/bin/solr stop -all
+ 
+start cmd 
+su solr
+cd /opt/solr && apache-zookeeper-3.7.0-bin/bin/zkServer.sh start apache-zookeeper-3.7.0-bin/conf/zoo.cfg
+solr-8.9.0/bin/solr -cloud
+
+
+ps -ef| grep java --> will check if any java related think working
+ 
+ 
+EC2 me ja k private IP utta that is your LocalIP
+********************************************************************************************
+ 
+connect to the server and use the command sudo su -
+su solr 
+cd /opt/solr && apache-zookeeper-3.7.0-bin/bin/zkServer.sh stop && solr-8.9.0/bin/solr stop -all
+
+cd /opt/solr && apache-zookeeper-3.7.0-bin/bin/zkServer.sh start apache-zookeeper-3.7.0-bin/conf/zoo.cfg
+solr-8.9.0/bin/solr -cloud
+ 
+cd /opt/solr/solr-8.9.0/bin && sudo sed -i 's/SOLR_HEAP=.*/SOLR_HEAP="12g"/' solr.in.sh
+
+
+
+--------------------------------------------------------------
+
+
+import org.springframework.dao.DataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.jdbc.core.RowMapper;
+	@Override
+	public List<GtDetails> getPriceForGTDetailsByModifiedOn(String date) {
+		String sql = String.format(gtSolrQueryUtil.getQueryFromType(TYPE.GT_DETAILS_PRICE_BY_MODIFIED_ON), date,date,date);
+		LOG.info("############### Started Getting Gt-Details Price DeltaImport From Database #################");
+		List<GtDetails> gtPriceDetails = jdbcTemplate.query(sql, new GtdetailsPriceRowMapper());
+		LOG.info("############### Finished Getting Gt-Details Price DeltaImport From Database #################");
+		return gtPriceDetails;
+	}
+	
+	
+	
+	
+	package com.gtsolr.dataimporthandler.solr.repo;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.gtsolr.dataimporthandler.constant.TYPE;
+import com.gtsolr.dataimporthandler.entity.GtSolrIndexingStatus;
+import org.springframework.data.domain.Pageable;
+
+import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.solr.repository.Query;
+import org.springframework.data.solr.repository.SolrCrudRepository;
+
+import com.gtsolr.dataimporthandler.entity.Gt;
+import org.springframework.stereotype.Repository;
+
+public interface GtSolrRepository extends SolrCrudRepository<Gt, String>{
+//	public List<BetaGt> findByIMPRESSION_ID(long iMPRESSION_ID);
+//	@Override
+//	default Optional<BetaGt> findById(Long id) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+    @Query(value = "IMPRESSION_ID : [?0 TO *]")
+    List<Gt> findByIMPRESSION_ID( String iMPRESSION_ID, Pageable pageable);
+
+    @Query(value = "*:*")
+    List<Gt> findByIMPRESSION_ID(Pageable pageable);
+}
+
+
+		int drmCountCanada = isDrmFreeCanadaGenerationRequired() ? kbartService.generateDRMFreeFilesExcludingCanada() : 0;
+
+	//TODO:: Once DRM-FREE Canada goes live in prod (WCM-10776), this needs to be removed
+	private boolean isDrmFreeCanadaGenerationRequired(){
+		String value = ssmService.getValueFromSSM(propertyConfiguration.getDrmFreeCanadaSwitchKey());
+		if(value!=null)
+			return Boolean.parseBoolean(value.strip());
+		return false;
+	}
+	
+	
+	
+{	
+"id": "403",
+"collectionType": "GT_DETAILS_CLASSIFICATION_BY_MODIFIED_ON_BATCH_PROCESSING",
+"IndexedDate": "2022-07-07T15:08:47.473Z",
+"query": "with l as\n              \t\t\t(\n              \t\t\tselect\n              \t\t\tdecode(level,\n              \t\t\t1, 'DIGIFORM%', /* Digital formats*/\n              \t\t\t2, 'FPUB%', /* First publication date*/\n              \t\t\t3, 'DRM%', /* Digital Right management*/\n              \t\t\t4, 'WB%',/* Web collection*/\n              \t\t\t5, 'SC%',/* subject code*/\n              \t\t\t6, 'WEBROUTE%',/* Web Route*/\n              \t\t\t7, 'FIMP%',    /* Former Imprint*/\n              \t\t\t8, 'CTM%', /* control something..*/\n              \t\t\t9, 'EBR%',  /* Ebook restrictions*/\n              \t\t\t10, 'UX%', /* Readership level*/\n              \t\t\t11, 'WR%', /* web restrictions*/\n              \t\t\t12, 'IC%',/* Inspection Copy*/\n              \t\t\t13, 'R%', /* Readership level*/\n              \t\t\t14, 'IMP%',  /* Imprint*/\n              \t\t\t15, 'INFO', /* Restriction information*/\n              \t\t\t16, 'BISAC%', /*BISAC SUBJECT CODES*/\n              \t\t\t17, 'CT', /* Channel Type*/\n              \t\t\t18, 'BC', /* Bookshop category */\n              \t\t\t19, 'NORIGHTS%', /* No Rights */\n              \t\t\t20,'POD%', /*POD supplier and Date*/\n              \t\t\t21,'PSG%', /*Profit subject group*/\n              \t\t\t22,'WST%', /*Warehouse Status*/\n              \t\t\t23,'PD', /*Paperback Direct*/\n              \t\t\t24,'HD', /*Hardback Direct*/\n              \t\t\t25,'USMR%', /*US Marketing restrictions*/\n              \t\t\t26,'NI%', /*New In*/\n              \t\t\t27,'ONIX_%', /*ONIX Dates*/\n              \t\t\t28,'MR%', /*UK Marketing restrictions*/\n              \t\t\t29,'LONX_YBP%', /*YBP onix Dates*/\n              \t\t\t30,'LONX_PROQUEST%' ,/*Proquest onix Dates*/\n              \t\t\t31,'OA%',  /*Open Access Titles*/\n              \t\t\t32,'UKPRICE', /*UK Price Only Flag*/\n              \t\t\t33,'USPRICE',  /*US Price Only Flag*/\n              \t\t\t34,'UBXA%',  /*UBXA Thematic Collection*/\n              \t\t\t35,'PREX', /* Price Exception */\n              \t\t\t36,'LONX_NBDDATE', /*Neilson Onix*/\n              \t\t\t37,'CI%', /*CI Content Information */\n              \t\t\t38,'NOEBKCHO', /*No eBook By Choice */\n              \t\t\t39,'NONEXDR', /*Non Exclusive Drights */\n                          40,'COMPSITE',/*Companion Website */\n                          41,'EBPRFM',/*Ready for Invoicing*/\n                          42,'PRDET%',/*Manufacturing Info (Migrated)*/\n                          43,'PRINTCOOO%',/*Print Country of Origin*/\n                          44,'VERTEX',/*Versioned Textbook*/\n                          45,'WC%',/*Web Codes*/\n                          46,'OPCT%',/*ONIX Product Content Type*/\n                          47,'CSA%',/*Coresource Assets*/\n                          48,'KT%', /*Key Titles*/\n                          49,'DAC' /*Reissue (Original DAC)*/ ) n from dual connect by level <=49\n              \t\t\t)\n              \t\tSELECT               \n\t\t\t(TO_CHAR (a.additional_id) ||a.cat_code)  as UNIQUEKEY, \n\t\t\ta.additional_id as IMPRESSION_ID,                     \n\t\t\ta.cat_code as cat_code, \n\t\t\tb.CAT_TEXT, \n\t\t\ta.value_string, a.value_datetime, \n\t\t\ta.value_decimal, \n\t\t\t                                a.Prio as Seq  FROM mex_oper_prod.pbs_classification a\n              \t\tINNER JOIN mex_oper_prod.pbs_category b ON a.mandator = b.mandator AND a.cat_code = b.cat_code AND 'PRD' = a.object_type AND a.object_type = b.object_type\n              \t\tAND a.group_of_company = b.group_of_company AND a.object_id = b.object_id AND a.object_id=1 where exists ( select null from l where a.cat_code like l.n )\n              \t\tand a.additional_id in (select v1.eid from (SELECT i.IMPRESSION_ID eid, rownum r FROM mex_oper_prod.prd_variant v INNER JOIN mex_oper_prod.prd_edition e\n              \t\tON e.EDITION_ID = v.EDITION_ID AND e.object_type = 'EDIT'INNER JOIN mex_oper_prod.prd_impression i ON i.IMPRESSION_ID = v.IMPRESSION_ID WHERE(v.MODIFIED_ON IS\n              \t\tNOT NULL AND v.MODIFIED_ON > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London'      )\n              \t\tOR(e.MODIFIED_ON IS NOT NULL AND e.MODIFIED_ON > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London')\n              \t\tOR(i.MODIFICATION_DATE IS NOT NULL AND i.MODIFICATION_DATE > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London')\n                      ) v1 where v1.r BETWEEN %a AND %b)",
+"_version_": 1737706991750480000
+},
+{
+"id": "400",
+"query": "with l as\n              \t\t\t(\n              \t\t\tselect\n              \t\t\tdecode(level,\n              \t\t\t1, 'DIGIFORM%', /* Digital formats*/\n              \t\t\t2, 'FPUB%', /* First publication date*/\n              \t\t\t3, 'DRM%', /* Digital Right management*/\n              \t\t\t4, 'WB%',/* Web collection*/\n              \t\t\t5, 'SC%',/* subject code*/\n              \t\t\t6, 'WEBROUTE%',/* Web Route*/\n              \t\t\t7, 'FIMP%',    /* Former Imprint*/\n              \t\t\t8, 'CTM%', /* control something..*/\n              \t\t\t9, 'EBR%',  /* Ebook restrictions*/\n              \t\t\t10, 'UX%', /* Readership level*/\n              \t\t\t11, 'WR%', /* web restrictions*/\n              \t\t\t12, 'IC%',/* Inspection Copy*/\n              \t\t\t13, 'R%', /* Readership level*/\n              \t\t\t14, 'IMP%',  /* Imprint*/\n              \t\t\t15, 'INFO', /* Restriction information*/\n              \t\t\t16, 'BISAC%', /*BISAC SUBJECT CODES*/\n              \t\t\t17, 'CT', /* Channel Type*/\n              \t\t\t18, 'BC', /* Bookshop category */\n              \t\t\t19, 'NORIGHTS%', /* No Rights */\n              \t\t\t20,'POD%', /*POD supplier and Date*/\n              \t\t\t21,'PSG%', /*Profit subject group*/\n              \t\t\t22,'WST%', /*Warehouse Status*/\n              \t\t\t23,'PD', /*Paperback Direct*/\n              \t\t\t24,'HD', /*Hardback Direct*/\n              \t\t\t25,'USMR%', /*US Marketing restrictions*/\n              \t\t\t26,'NI%', /*New In*/\n              \t\t\t27,'ONIX_%', /*ONIX Dates*/\n              \t\t\t28,'MR%', /*UK Marketing restrictions*/\n              \t\t\t29,'LONX_YBP%', /*YBP onix Dates*/\n              \t\t\t30,'LONX_PROQUEST%' ,/*Proquest onix Dates*/\n              \t\t\t31,'OA%',  /*Open Access Titles*/\n              \t\t\t32,'UKPRICE', /*UK Price Only Flag*/\n              \t\t\t33,'USPRICE',  /*US Price Only Flag*/\n              \t\t\t34,'UBXA%',  /*UBXA Thematic Collection*/\n              \t\t\t35,'PREX', /* Price Exception */\n              \t\t\t36,'LONX_NBDDATE', /*Neilson Onix*/\n              \t\t\t37,'CI%', /*CI Content Information */\n              \t\t\t38,'NOEBKCHO', /*No eBook By Choice */\n              \t\t\t39,'NONEXDR', /*Non Exclusive Drights */\n                          40,'COMPSITE',/*Companion Website */\n                          41,'EBPRFM',/*Ready for Invoicing*/\n                          42,'PRDET%',/*Manufacturing Info (Migrated)*/\n                          43,'PRINTCOOO%',/*Print Country of Origin*/\n                          44,'VERTEX',/*Versioned Textbook*/\n                          45,'WC%',/*Web Codes*/\n                          46,'OPCT%',/*ONIX Product Content Type*/\n                          47,'CSA%',/*Coresource Assets*/\n                          48,'KT%', /*Key Titles*/\n                          49,'DAC' /*Reissue (Original DAC)*/ ) n from dual connect by level <=49\n              \t\t\t)\n              \t\tSELECT             count(a.additional_id) FROM mex_oper_prod.pbs_classification a\n              \t\tINNER JOIN mex_oper_prod.pbs_category b ON a.mandator = b.mandator AND a.cat_code = b.cat_code AND 'PRD' = a.object_type AND a.object_type = b.object_type\n              \t\tAND a.group_of_company = b.group_of_company AND a.object_id = b.object_id AND a.object_id=1 where exists ( select null from l where a.cat_code like l.n )\n              \t\tand a.additional_id in (select v1.eid from (SELECT i.IMPRESSION_ID eid, rownum r FROM mex_oper_prod.prd_variant v INNER JOIN mex_oper_prod.prd_edition e\n              \t\tON e.EDITION_ID = v.EDITION_ID AND e.object_type = 'EDIT'INNER JOIN mex_oper_prod.prd_impression i ON i.IMPRESSION_ID = v.IMPRESSION_ID WHERE(v.MODIFIED_ON IS\n              \t\tNOT NULL AND v.MODIFIED_ON > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London'      )\n              \t\tOR(e.MODIFIED_ON IS NOT NULL AND e.MODIFIED_ON > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London')\n              \t\tOR(i.MODIFICATION_DATE IS NOT NULL AND i.MODIFICATION_DATE > from_tz(to_timestamp('%s','YYYY-MM-DD HH24:MI:SS') , 'UTC') at time zone 'Europe/London')\n                      ) v1 where v1.r BETWEEN %a AND %b)",
+"collectionType": "GT_DETAILS_CLASSIFICATION_BY_MODIFIED_ON_BATCH_PROCESSING",
+"IndexedDate": "2022-07-07T14:29:05.793Z",
+"_version_": 1737704494182957000
+},
+
+
+
+------------------------------------------
+
+
+
+{
+  "Type" : "Notification",
+  "MessageId" : "a499054e-71ad-5d3c-83c0-5e93a5e7a087",
+  "TopicArn" : "arn:aws:sns:eu-west-1:012177264511:sns-euw1-ap-pe-ws4-discovery-kbart-ingestion-notification-d",
+  "Message" : "{\"status\":\"GENERATE_ADDITIONAL_KBART_FILES\"}",
+  "Timestamp" : "2022-11-03T14:36:58.599Z",
+  "SignatureVersion" : "1",
+  "Signature" : "L4Frg8tKK7FFQ6zelopDdBFkgMmbxYdbkjaataM+eTs9Ri9rxePvyTwQ3aR+RNT2jb95d4UMRBlBZ/vfLCVkhSofLIsS6y5C0sPCAVbUDU0t8Ymd5CCrFUrbGRklZZKiWCMzbYuAiFIEOmmbJjkV6HOSjzSpHrVJvDE08a1kwEvhAFR/kV1sKZ3SQfhQm2L7EFA0kqJo09BJLor/2brLI9DJgyuaEGxlO53/AalxBikkaTvBd0H7O8vk7xejSwrNPHQyXDu0YGOQDqK8h9p7074kpm9u0bKFy4XErIcWT8zRV0VsGx2LjIlGp70taqrBnVau+XdFdZmJoGv3Vx4o2w==",
+  "SigningCertURL" : "https://sns.eu-west-1.amazonaws.com/SimpleNotificationService-56e67fcb41f6fec09b0196692625d385.pem",
+  "UnsubscribeURL" : "https://sns.eu-west-1.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:eu-west-1:012177264511:sns-euw1-ap-pe-ws4-discovery-kbart-ingestion-notification-d:d32e5161-65e3-495f-968c-61caa3a82a83",
+  "MessageAttributes" : {
+    "status" : {"Type":"String","Value":"GENERATE_ADDITIONAL_KBART_FILES"}
+  }
+}
+
+KBART/latest/DRM/
+
+TaylorFrancis_Full_Available_Collection_DRM_FREE
+
+
+{"status":"INGESTION_START","fileName":"dacList-2024-09-15.csv","fileUrl":"https://s3-euw1-ap-pe-ws4-capi-store-p.s3.amazonaws.com/collection/dacList-2024-09-15.csv"}
+
+
+
+status-depricated-daclist-19-09-2024.csv
+
+dacList-2024-08-07.csv
+
+{"dacKey":1, "printIdentifier":1, "isbn":1}
+
+sqs-euw1-ap-pe-ws4-discovery-kbart-ingestion- -> 
+aws.s3.capi.bucket -> s3-euw1-ap-pe-ws4-capi-store-
+/ecs/content-discovery-service-v2-task-
+
+https://s3.console.aws.amazon.com/s3/buckets/s3-euw1-ap-pe-ws4-capi-store-d?prefix=KBART/latest/&region=eu-west-1
+
+
+cloudwatch dev discovery :
+https://eu-west-1.console.aws.amazon.com/cloudwatch/home?region=eu-west-1#logsV2:log-groups/log-group/$252Fecs$252Fcontent-discovery-service-v2-task-d
+
+
+File name : 
+
+KbartIngestionProcessor -> startIngestion
+KbartServiceImpl -> triggerKbartIngestionFromDacList ->  ingestKbartbyDacList
+ProductClient -> getPCMProductWrapperListWithFilterQuery
+PcmJsonProductWrapper -> setGTOrignatorInfo
+
+KbartServiceImpl -> ingestKbartbyDacList -> createKbartObject -> creating Kbart from productWrapper
+
+Amazon S3/Buckets/s3-euw1-ap-pe-ws4-capi-store-u/KBART/latest/DRM-USA/
+
+pcm product api with ISBN: 
+http://product-store-api-prod.eu-west-1.elasticbeanstalk.com/products/?apiVersion=4.0.1&responseGroup=large&identifierName=isbn&identifierValues=9780367693145
+
+
+PCMProductDataList
+
+--------------------------------------------------------------------------
+Discovery to distribution starts every tueseday at 9clk utc
+
+To generate Csv Step 1
+{'isNewKbartCollection': false}
+sqs-euw1-ap-pe-ws4-discovery-service-processing-dac-list-p
+
+{"status" : "GENERATE_DAC_LIST"}
+
+deleteMany( {} )
+
+{"code":'UBXA02'} -> search in mongo
+
+{ $and: [ {"openAccess":{$exists:true}}, {dateMonographPublishedPrint: { $gte: ISODate('2018-01-01')  }  } ] }
+
+{ $and: [ {"openAccess":{$exists:true}}, {'bookTextType' : 'SPIBs'} ] }
+
+
+
+PCMAPIServiceImpl
+String pcmEndpoint = "http://pcm-api-prod.us-east-1.elasticbeanstalk.com/products/?apiVersion={apiVersion}&responseGroup={responseGroup}&identifierName={identifierName}&identifierValues={identifierValues}";
+
+jacket_s3_amazon
+{
+  "cc" : "jishnu.das@necsws.com",
+  "subject" : "New T&F Collection for loading",
+  "to" : "jishnu.das@necsws.com",
+  "attachmentS3Ref" : "https://s3-euw1-ap-pe-ws4-email-module-attachment-dev.s3.eu-west-1.amazonaws.com/discovery-kbart-collection-report/TaylorFrancis_New_KbartCollection_Report_2023-06-09.txt",
+  "body" : "A KBART for a new T&F collection has been loaded to Ex Libris MFT. \n Filename: TaylorFrancis_New_KbartCollection_Report_2023-06-09.txt\nPlease make this collection available on all Ex Libris discovery services.",
+  "isAttachmentRequired" : "true"
+}
+
+https://s3.console.aws.amazon.com/s3/buckets/s3-euw1-ap-pe-ws4-capi-store-u?region=eu-west-1&prefix=KBART/latest/RHO/&showversions=false
+
+
+
+
+http://awsnlb-pch-pcm-api-service-p-c5d7c1ab3b93a1e8.elb.us-east-1.amazonaws.com/products/?apiVersion=4.0.1&responseGroup=large&identifierName=dacKey&identifierValues=C2009-0-20833-6
+
+
+
+
+===============================================================================================================
+
+
+
+Questions? 
+What is swagger?
+what is target in VPC?
+what is terraform?
+what is lamda?
+what is Auth? -> 
+--------------------------------------------------------------------------------
+
+Java Interview Questions
+Spring boot IQ (transaction Manangement) etc.
+Hibernate IQ
+Docker top 10 IQ
+IAM IQ
+VPC, ECS,  EC2, ECR, Service, Task-defnition top 10 interview question
+Load-Balancer, API-Gateway Interview Question 
+Route 53  (DNS server has IP of all the domain name)
+NACL, security Group (Security at app level and subnet level)
+SQL IQ 
+https://www.openlogic.com/openjdk-downloads
+
+-----------------------------------------
+
+
+what are actuator? used somewhere in project spring boot
+as per my understanding what i have used
+AOP -> waht is AOP
+circuit breaker design pattern when there is load it will send some message to client insted of waiting.
+not structured then go for nosql
+if structured then go for RDBMS
+saga design pattern -> @transaction OR 2 Phase Commit in Microservices
+security -> json webtoken @auth securing restEnd point 
+application property me same name vale ka kya karega (profiles)
+What you check when you code review > Comment should be added in method > naming convinsion > function resuable > java 8 is used > Dont created unwanted objects .
+JUNit and mackiatok fream work
+Docker Why? 
+Ask manjur why how we use security in our project
+where we add all password 
+Updating agent in EC2 everyTime (Manjur)
+---
+Service Discovery and Service Registry in Microservices
+
+1655468
+
+tell shabressh to take snapshot and keep for long time
+
+
+___________
+
+
+Master card -> Rohit frnd
+Accenture -> surrender bhai -> Rohit frnd
+Synicron -> Rohit
+Bank of America -> 
+Deloit -> snehan jalli
+
+
+I have checked the above readme file, there isn't much for me to understand and run the application. 
+
+
+
+==============================================================
+
+
+[
+{
+"clubName":"BARCELONA",
+"players":[{"jerseyNo":7,"name":"xavi","matchesPlayed":140,"position":"FORWARD","address":[{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},
+{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"}]},
+{"jerseyNo":1,"name":"valdies","matchesPlayed":35,"position":"GOALKEEPER","address":[{"Country":"XYZ","pinCode":1231,"fullAddress":"XYZZZZZZZZ"},
+{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},
+{"jerseyNo":5,"name":"dani alves","matchesPlayed":88,"position":"BACKS","address":[{"Country":"BRAZIL","pinCode":9865,"fullAddress":"RIo-de-genirio"},
+{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},
+{"jerseyNo":10,"name":"Messi","matchesPlayed":59,"position":"MIDS","address":[{"Country":"ARGENTINA","pinCode":1010,"fullAddress":"Rozario"},
+{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"FRANCE","pinCode":1278,"fullAddress":"paris"}]},
+{"jerseyNo":9,"name":"inesta","matchesPlayed":78,"position":"FORWARD","address":[{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"}]},{"jerseyNo":2,"name":"sergio busquet","matchesPlayed":66,"position":"BACKS","address":[{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"}]},{"jerseyNo":6,"name":"pique","matchesPlayed":90,"position":"BACKS","address":[{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"}]},{"jerseyNo":15,"name":"masiqrano","matchesPlayed":45,"position":"MIDS","address":[{"Country":"ARGENTINA","pinCode":1010,"fullAddress":"Rozario"},{"Country":"BRAZIL","pinCode":9865,"fullAddress":"RIo-de-genirio"},{"Country":"FRANCE","pinCode":1278,"fullAddress":"paris"}]},{"jerseyNo":3,"name":"henry","matchesPlayed":25,"position":"BACKS","address":[{"Country":"FRANCE","pinCode":1278,"fullAddress":"paris"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":11,"name":"gabii","matchesPlayed":76,"position":"FORWARD","address":[{"Country":"XYZ","pinCode":1231,"fullAddress":"XYZZZZZZZZ"},{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":16,"name":"ronaldinio jr","matchesPlayed":76,"position":"FORWARD","address":[{"Country":"BRAZIL","pinCode":9865,"fullAddress":"RIo-de-genirio"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":17,"name":"ronaldo rozario","matchesPlayed":77,"position":"MIDS","address":[{"Country":"BRAZIL","pinCode":9865,"fullAddress":"RIo-de-genirio"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":18,"name":"rivaldo","matchesPlayed":79,"position":"FORWARD","address":[{"Country":"GERMANY","pinCode":457890,"fullAddress":"Drotmud"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"},{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"}]},{"jerseyNo":19,"name":"maradona","matchesPlayed":80,"position":"MIDS","address":[{"Country":"ARGENTINA","pinCode":1010,"fullAddress":"Rozario"},{"Country":"BRAZIL","pinCode":9865,"fullAddress":"RIo-de-genirio"},{"Country":"FRANCE","pinCode":1278,"fullAddress":"paris"}]},{"jerseyNo":20,"name":"david villa","matchesPlayed":86,"position":"FORWARD","address":[{"Country":"CROATIA","pinCode":763409,"fullAddress":"budagandapo"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":21,"name":"la mela","matchesPlayed":55,"position":"BACKS","address":[{"Country":"ENGLAND","pinCode":2323,"fullAddress":"London"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]},{"jerseyNo":22,"name":"viqter valdes jr","matchesPlayed":88,"position":"GOALKEEPER","address":[{"Country":"XYZ","pinCode":1231,"fullAddress":"XYZZZZZZZZ"},{"Country":"SPAIN","pinCode":44456,"fullAddress":"malagaa"},{"Country":"SPAIN","pinCode":77565,"fullAddress":"Barcelona"}]}],
+"coach":"PEP_GAURDIOLA"
+}
+,
+{
+"clubName":"REAL_MADRID",
+"players":[{"jerseyNo":7,"name":"Ronaldo","matchesPlayed":190,"position":"FORWARD","address":[{"Country":"PORTUGAL","pinCode":7777,"fullAddress":"Funchal"},
+{"Country":"PORTUGAL","pinCode":1171,"fullAddress":"MADIRRAAAAA"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},
+{"Country":"FRANCE","pinCode":3373,"fullAddress":"paris"}]},{"jerseyNo":1,"name":"casillas","matchesPlayed":35,"position":"GOALKEEPER","address":[{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},
+{"jerseyNo":5,"name":"marcelo","matchesPlayed":88,"position":"BACKS","address":[{"Country":"BRAZIL","pinCode":5855,"fullAddress":"RIo-de-genirio"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":10,"name":"modric","matchesPlayed":59,"position":"MIDS","address":[{"Country":"CROATIA","pinCode":4345,"fullAddress":"budapest"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},{"jerseyNo":9,"name":"benzema","matchesPlayed":78,"position":"FORWARD","address":[{"Country":"FRANCE","pinCode":3373,"fullAddress":"paris"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":2,"name":"varane","matchesPlayed":66,"position":"BACKS","address":[{"Country":"XYZ","pinCode":9888,"fullAddress":"XYZZZZZZZZ"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},{"jerseyNo":6,"name":"ramos","matchesPlayed":90,"position":"BACKS","address":[{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},{"jerseyNo":15,"name":"kross","matchesPlayed":45,"position":"MIDS","address":[{"Country":"GERMANY","pinCode":4744,"fullAddress":"munich"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":3,"name":"pepe","matchesPlayed":25,"position":"BACKS","address":[{"Country":"PORTUGAL","pinCode":1171,"fullAddress":"MADIRRAAAAA"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":11,"name":"bale","matchesPlayed":76,"position":"FORWARD","address":[{"Country":"CROATIA","pinCode":4345,"fullAddress":"budapest"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},{"jerseyNo":16,"name":"vinicious jr","matchesPlayed":76,"position":"FORWARD","address":[{"Country":"BRAZIL","pinCode":5855,"fullAddress":"RIo-de-genirio"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":17,"name":"kamavinga","matchesPlayed":77,"position":"MIDS","address":[{"Country":"FRANCE","pinCode":3373,"fullAddress":"paris"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":18,"name":"Di maria","matchesPlayed":79,"position":"FORWARD","address":[{"Country":"ARGENTINA","pinCode":6566,"fullAddress":"capitaal Argentina"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"FRANCE","pinCode":3373,"fullAddress":"paris"}]},{"jerseyNo":19,"name":"ozil","matchesPlayed":80,"position":"MIDS","address":[{"Country":"XYZ","pinCode":9888,"fullAddress":"XYZZZZZZZZ"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"},{"Country":"SPAIN","pinCode":998866,"fullAddress":"AthleticoMadrid"}]},{"jerseyNo":20,"name":"RAUL","matchesPlayed":86,"position":"FORWARD","address":[{"Country":"ENGLAND","pinCode":7577,"fullAddress":"London"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":21,"name":"Roberto Carlos","matchesPlayed":55,"position":"BACKS","address":[{"Country":"BRAZIL","pinCode":5855,"fullAddress":"RIo-de-genirio"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]},{"jerseyNo":22,"name":"Nawazz","matchesPlayed":88,"position":"GOALKEEPER","address":[{"Country":"ENGLAND","pinCode":7577,"fullAddress":"London"},{"Country":"SPAIN","pinCode":2722,"fullAddress":"Madrid"}]}],
+"coach":"DON_CARLO"
+}
+]
+
+Notes : Null values in java is pointed to 0000 address 
+
+------------------------------------------------------------------------
+
+
+
+@Id
+@GeneratedValue(strategy = GenerationType.UUID)
+private UUID id;
+
+------------------------------------------------------------------------------
+
+List<String> inputs = Arrays.asList(null, "foo", "bar");
+
+Optional<String> firstNotNullElement = inputs.stream()
+      .filter(Objects::nonNull) // this live will remove all null element 
+      .findFirst();
+	  
+Optional<String> firstElement = inputs.stream()
+      .map(Optional::ofNullable)
+      .findFirst()
+      .flatMap(Function.identity());
+
+
+-----------------------------------------------------------------------------
+
+List<String> immutableList = List.of("one","two","three");
+	//class level used in gtsolr
+  private ThreadLocal<Integer> noOfRecordProcessed = new ThreadLocal<Integer>();
+  // ye method k andar
+noOfRecordProcessed.set(0);
+inside other method without passing it / just set like this and it will be assciated with that thread
+noOfRecordProcessed.set(noOfRecordProcessed.get() + listOfGtDetailRecord.size());
+
+noOfRecordProcessed.get();
+
+----------------------------------------------------------------------
+
+kbartCollectionInfo.setDacs(collectionKbarts
+		.stream()
+		.map(Kbart::getDacKey)
+		.collect(Collectors.toList()));
+------------------------------------------------------------------------
+        int chunkSize = 5;
+        AtomicInteger counter = new AtomicInteger();
+        final Collection<List<String>> partitionedList =
+                impId.stream().collect(Collectors.groupingBy(i -> counter.getAndIncrement() / chunkSize))
+                        .values();
+        for(List<String> subList : partitionedList) {
+            String sql = "SELECT * FROM TF_SOLR WHERE IMPRESSION_ID IN ( " + StringUtils.join(subList, ",") + ")";
+//            gtRepository.getAllUniqueImpressionId();
+        }
+-------------------------------------------------------------------------
+
+objectSummaries.addAll(objectListing
+				.getObjectSummaries()
+				.stream()
+				.filter(filterBetweenDates(startDate, endDate))
+				.collect(Collectors.toList()));
+				
+				
+				What is load balancing?
+				
+				
+				    
+------------------------------------------------------------------------
+	CrcCollections > NETBASE_ASSIGN_KEY_KEY > netbase
+		private List<CollectionWrapper> buildCrcCollections(List<PCMProductCategories> catogeries){
+        if(null != catogeries && !catogeries.isEmpty()) {
+            return catogeries.stream()
+                    .filter(catergory -> catergory.getType().equalsIgnoreCase(NETBASE_ASSIGN_KEY_KEY))
+                    .map(catergory -> new CollectionWrapper(CRC.toString(),catergory.getName(),catergory.getCode()) )
+                    .collect(Collectors.toList());
+        }
+        return Collections.emptyList();
+    }
+	-------------------------------------------------------------------------
+	tfeCollections >  SUBJECTS_KEY > SUBJECT
+	private List<CollectionWrapper> buildTFECollections(List<PCMProductClassifications> classification, String collType) {
+        if(null !=classification && !classification.isEmpty()){
+            return classification
+                    .stream()
+                    .filter(value -> value.getType().equalsIgnoreCase(SUBJECTS_KEY))
+                    .filter(val -> checkSubjectValue(val.getCode()))
+                    .map(val -> new CollectionWrapper(collType, val.getName(), val.getCode()))
+                    .collect(Collectors.toList());
+        }
+        return Collections.emptyList();
+    }
+	----------------------------------------------------------------------------
+	thematicCollections  >  THEMATIC_KEY  >  thematic
+	private List<CollectionWrapper> buildThematicCollections(List<PCMProductCategories> productCategories, String collType) {
+        if(null !=productCategories && !productCategories.isEmpty()){
+            return productCategories
+                    .stream()
+                    .filter(catergory -> catergory.getType().equalsIgnoreCase(THEMATIC_KEY))
+                    .filter(val -> checkSubjectValue(val.getCode()))
+                    .map(val -> new CollectionWrapper(collType, val.getName(), val.getCode()))
+                    .collect(Collectors.toList());
+        }
+        return Collections.emptyList();
+    }
+	---------------------------------------------------------------------------------
+	teachingSchoolingEducationColletions  >  TEACHING_SCHOOLING_EDUCATION_CODE  >  HSS052
+	private List<CollectionWrapper> buildSchoolTeachingCollections(List<PCMProductCategories> catogeries){
+        if(null != catogeries && !catogeries.isEmpty()) {
+            return catogeries.stream()
+                    .filter(catergory -> nonNull(catergory.getCode()) && catergory.getCode().equalsIgnoreCase(KbartConstants.TEACHING_SCHOOLING_EDUCATION_CODE))
+                    .map(catergory -> new CollectionWrapper(SCHOOLTEACHING.toString(),catergory.getName(),catergory.getCode()) )
+                    .collect(Collectors.toList());
+        }
+        return Collections.emptyList();
+    }
+	-----------------------------------------------------------------------------------
+	private List<CollectionWrapper> buildHSSCollections(List<PCMProductCategories> productCategories, String subjectCode,List<PCMProductIsPartOF> isPartOFList) {
+        if(null !=productCategories && !productCategories.isEmpty()){
+            if(!CollectionUtils.isEmpty(isPartOFList)) {
+                List<PCMProductIsPartOF> isPartOFHSSList = isPartOFList.stream().filter(pcmProductIsPartOF -> nonNull(pcmProductIsPartOF) && nonNull(pcmProductIsPartOF.getIdentifiers())
+                        && StringUtils.isNoneEmpty( pcmProductIsPartOF.getIdentifiers().getCollectionId()) && pcmProductIsPartOF.getIdentifiers().getCollectionId().contains(subjectCode.toUpperCase())).collect(Collectors.toList());
+                if(!CollectionUtils.isEmpty(isPartOFHSSList))
+                    return productCategories
+                            .stream()
+                            .filter(pcmProductCategories -> nonNull(pcmProductCategories) && nonNull(pcmProductCategories.getCode()) && nonNull(pcmProductCategories.getName())
+                                    && pcmProductCategories.getType().equalsIgnoreCase(subjectCode)
+                            )
+                            .filter(val -> checkSubjectValue(val.getCode()))
+                            .map(val -> new CollectionWrapper(subjectCode, val.getName(), val.getCode()))
+                            .collect(Collectors.toList());
+            } 	}	return Collections.emptyList();	}
+	
+	
+	================================================================================================
+	
+	
+	
+	
+	-- DROP FUNCTION public.anonymisetask(uuid);
+
+CREATE OR REPLACE FUNCTION public.anonymisetask(p_task_id uuid)
+ RETURNS text
+ LANGUAGE plpgsql
+AS $function$
+DECLARE
+    v_diagnostics TEXT;
+    v_error TEXT;
+    v_state TEXT;
+    v_msg TEXT;
+    v_detail TEXT;
+    v_hint TEXT;
+    v_context TEXT;
+    v_task_rec RECORD;
+    v_anon_text TEXT := '';
+    v_status_code TEXT := '';
+BEGIN
+    raise notice '%', get_error_message (432,'SCH');--'anonymisetask() BEGIN';
+    SELECT
+        value INTO v_anon_text
+    FROM
+        system_parameters
+    WHERE
+        "key" = 'anonymise-text-value';
+    IF NOT FOUND THEN
+        RAISE EXCEPTION '%', get_error_message (433,'SCH');--'Value for Anonymise Text Value system parameter not found';
+    END IF;
+
+    -- Anonymise relevant transactional DB records
+    UPDATE
+        tasks
+    SET
+        task_summary = v_anon_text,
+        special_instructions = v_anon_text,
+        task_alerts = v_anon_text
+    WHERE
+        id = p_task_id;
+    --           AND UPPER(status_code) = 'COMPLETED';
+
+    UPDATE
+        task_contacts
+    SET
+        contact_name = v_anon_text,
+        contact_email = v_anon_text,
+        contact_telno = v_anon_text,
+        contact_telno2 = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        task_docs
+    SET
+        description = v_anon_text,
+        doc_data = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        task_images
+    SET
+        description = v_anon_text,
+        image_data = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        task_links
+    SET
+        description = v_anon_text,
+        url = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        task_reports
+    SET
+        "data" = NULL
+    WHERE
+        task_id = p_task_id;
+    
+    -- Anonymise relevant data warehouse DB records
+    UPDATE
+        dwh.tasks
+    SET
+        task_summary = v_anon_text,
+        special_instructions = v_anon_text,
+        task_alerts = v_anon_text
+    WHERE
+        id = p_task_id;
+    UPDATE
+        dwh.task_contacts
+    SET
+        contact_name = v_anon_text,
+        contact_email = v_anon_text,
+        contact_telno = v_anon_text,
+        contact_telno2 = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        dwh.task_docs
+    SET
+        description = v_anon_text,
+        doc_data = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        dwh.task_images
+    SET
+        description = v_anon_text,
+        image_data = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        dwh.task_links
+    SET
+        description = v_anon_text,
+        url = v_anon_text
+    WHERE
+        task_id = p_task_id;
+    UPDATE
+        dwh.task_reports
+    SET
+        "data" = NULL
+    WHERE
+        task_id = p_task_id;
+    -- TODO: Add the processed records to audit table, obfuscating parameters passed from housing.
+    RETURN 'SUCCESS';
+EXCEPTION
+    WHEN OTHERS THEN
+        GET STACKED DIAGNOSTICS v_state = RETURNED_SQLSTATE,
+        v_msg = MESSAGE_TEXT,
+        v_detail = PG_EXCEPTION_DETAIL,
+        v_hint = PG_EXCEPTION_HINT,
+        v_context = PG_EXCEPTION_CONTEXT;
+raise notice E'Got exception:
+              state  : %
+              message: %
+              detail : %
+              hint   : %
+              context: %', v_state, v_msg, v_detail, v_hint, v_context;
+v_diagnostics = 'Got exception:
+              state  : ' || v_state || '
+              message: ' || v_msg || '
+              detail : ' || v_detail || '
+              hint   : ' || v_hint || '
+              context: ' || v_context;
+-- send errors back to calling function. This should set the messages_in record to status E
+RETURN v_error || '####' || v_diagnostics;
+END;
+
+$function$
+;
+---------------------------------------------------------------------
+
+
+-- DROP FUNCTION public.anonymisetask_by_contact(uuid, text);
+
+CREATE OR REPLACE FUNCTION public.anonymisetask_by_contact(p_organisation_id uuid, p_contact_id text)
+ RETURNS text
+ LANGUAGE plpgsql
+AS $function$
+DECLARE
+    v_diagnostics TEXT;
+    v_error TEXT := '';
+    v_state TEXT;
+    v_msg TEXT;
+    v_detail TEXT;
+    v_hint TEXT;
+    v_context TEXT;
+    v_task_rec RECORD;
+    v_anon_text TEXT := '';
+    v_status_code TEXT := '';
+    v_currDt timestamptz;
+    v_startTime timestamptz;
+    v_endTime timestamptz;
+    v_timeDelta double precision;
+    v_anonReportTitle TEXT;
+    v_task_ref_text TEXT;
+    v_req_ref_text TEXT;
+    v_taskCount bigint := 0;
+    v_anon_tp_task_ids TEXT := '';
+    v_anon_tp_req_ids TEXT := '';
+    v_request_rec record;
+BEGIN
+    raise notice '%', get_error_message (434,'SCH');--'anonymisetask_by_contact() BEGIN';
+    v_currDt = NOW();
+    -- Get epoch date at start of function call, to calculate processing time later
+    v_startTime := clock_timestamp();
+    SELECT
+        value INTO v_anonReportTitle
+    FROM
+        system_parameters
+    WHERE
+        "key" = 'anonymisation-report-title';
+    IF NOT FOUND THEN
+        RAISE EXCEPTION '%', get_error_message (399,'SCH');--'Value for Anonymisation Report Title system parameter not found';
+    END IF;
+    SELECT
+        value INTO v_task_ref_text
+    FROM
+        system_parameters
+    WHERE
+        "key" = 'anonymisation-task-ref-text';
+    IF NOT FOUND THEN
+        RAISE EXCEPTION '%', get_error_message (402,'SCH');--'Value for Anonymisation Report Task Reference Text system parameter not found';
+    END IF;
+    v_req_ref_text = 'Booking Reqs: ';
+    SELECT
+        value INTO v_anon_text
+    FROM
+        system_parameters
+    WHERE
+        "key" = 'anonymise-text-value';
+    IF NOT FOUND THEN
+        RAISE EXCEPTION '%', get_error_message (433,'SCH');--'Value for Anonymise Text Value system parameter not found';
+    END IF;
+    	
+   IF NOT EXISTS(
+		SELECT 
+	    	tp_contact_id
+	    FROM
+	        task_contacts
+	    WHERE
+	        tp_contact_id = p_contact_id
+	        AND organisation_id = p_organisation_id
+	    UNION
+	    SELECT 
+			brc.third_party_contact_id contact_id
+		FROM booking_request_contacts brc  
+			INNER JOIN booking_requests br on br.id = brc.booking_request_id 
+		WHERE 
+			br.organisation_id = p_organisation_id
+			AND brc.third_party_contact_id = p_contact_id
+    	)  THEN
+        RAISE EXCEPTION '%', get_error_message (435,'SCH');--'The specified third party contact id cannot be found';
+    END IF;
+   
+   IF EXISTS ( SELECT 
+	    	1
+	    FROM
+	        task_contacts
+	    WHERE
+	        tp_contact_id = p_contact_id
+	        AND organisation_id = p_organisation_id
+     ) THEN    
+        -- Get count of tasks to be anonymised
+        SELECT
+            COUNT(*) INTO v_taskCount
+        FROM
+            tasks t
+        WHERE
+            t.id IN (
+                SELECT
+                    tc.task_id
+                FROM
+                    public.task_contacts tc
+                WHERE
+                    tc.tp_contact_id = p_contact_id);
+      
+        v_anon_tp_task_ids := v_task_ref_text;
+        FOR v_task_rec IN
+        SELECT
+            *
+        FROM
+            tasks t
+        WHERE
+            t.id IN (
+                SELECT
+                    tc.task_id
+                FROM
+                    public.task_contacts tc
+                WHERE
+                    tc.tp_contact_id = p_contact_id)
+            LOOP 
+                IF v_task_rec.status_code != 'COMPLETED' AND v_task_rec.status_code != 'REJECTED' AND v_task_rec.recalled = FALSE THEN 
+                    IF v_anon_tp_task_ids = v_task_ref_text THEN
+        	            v_anon_tp_task_ids := v_anon_tp_task_ids || v_task_rec.tp_task_id;
+    	            ELSE
+	                    v_anon_tp_task_ids := v_anon_tp_task_ids || ', ' || v_task_rec.tp_task_id;
+                	END IF;
+                    -- RAISE EXCEPTION v_task_rec.id || 'is current.  Please recall the visit to remove it from the mobile database/device.';
+                    RAISE EXCEPTION USING errcode = 'NOCOM', message = v_task_rec.id 
+                    || get_error_message (436,'SCH');--' is current. Please recall the visit to remove it from the mobile database/device.';
+                END IF;
+                
+                UPDATE
+                    tasks
+                SET
+                    task_summary = v_anon_text,
+                    special_instructions = v_anon_text,
+                    task_alerts = v_anon_text
+                WHERE
+                    id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                --           AND UPPER(status_code) = 'COMPLETED';
+                UPDATE
+                    task_contacts
+                SET
+                    contact_name = v_anon_text,
+                    contact_email = v_anon_text,
+                    contact_telno = v_anon_text,
+                    contact_telno2 = v_anon_text
+                WHERE
+                    organisation_id = p_organisation_id
+                    AND tp_contact_id = p_contact_id;
+                UPDATE
+                    task_docs
+                SET
+                    description = v_anon_text,
+                    doc_data = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    task_images
+                SET
+                    description = v_anon_text,
+                    image_data = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    task_links
+                SET
+                    description = v_anon_text,
+                    url = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    task_reports
+                SET
+                    "data" = NULL
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                -- Anonymise relevant data warehouse DB records
+                UPDATE
+                    dwh.tasks
+                SET
+                    task_summary = v_anon_text,
+                    special_instructions = v_anon_text,
+                    task_alerts = v_anon_text
+                WHERE
+                    id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    dwh.task_contacts
+                SET
+                    contact_name = v_anon_text,
+                    contact_email = v_anon_text,
+                    contact_telno = v_anon_text,
+                    contact_telno2 = v_anon_text
+                WHERE
+                    organisation_id = p_organisation_id
+                    AND tp_contact_id = p_contact_id;
+                UPDATE
+                    dwh.task_docs
+                SET
+                    description = v_anon_text,
+                    doc_data = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    dwh.task_images
+                SET
+                    description = v_anon_text,
+                    image_data = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    dwh.task_links
+                SET
+                    description = v_anon_text,
+                    url = v_anon_text
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                UPDATE
+                    dwh.task_reports
+                SET
+                    "data" = NULL
+                WHERE
+                    task_id IN (
+                        SELECT
+                            task_id
+                        FROM
+                            task_contacts
+                        WHERE
+                            organisation_id = p_organisation_id
+                            AND tp_contact_id = p_contact_id);
+                IF v_anon_tp_task_ids = v_task_ref_text THEN
+                    v_anon_tp_task_ids := v_anon_tp_task_ids || v_task_rec.tp_task_id;
+                ELSE
+                    v_anon_tp_task_ids := v_anon_tp_task_ids || ', ' || v_task_rec.tp_task_id;
+                END IF;
+            END LOOP;
+        
+    END IF;
+   
+   	IF EXISTS (SELECT 1 
+   		FROM booking_request_contacts brc  
+			INNER JOIN booking_requests br on br.id = brc.booking_request_id 
+		WHERE 
+			br.organisation_id = p_organisation_id
+			AND brc.third_party_contact_id = p_contact_id) THEN 
+			v_anon_tp_req_ids = v_req_ref_text;
+		   FOR v_request_rec IN
+		        (SELECT 
+					DISTINCT br.id booking_request_id,br.third_party_booking_id
+				FROM booking_request_contacts brc  
+					INNER JOIN booking_requests br on br.id = brc.booking_request_id 
+				WHERE 
+					br.organisation_id = p_organisation_id
+					AND brc.third_party_contact_id = p_contact_id)
+            LOOP
+            	UPDATE booking_requests
+            	SET description = v_anon_text,
+            		special_instructions = v_anon_text,
+            		access_details = v_anon_text
+            	WHERE id = 	v_request_rec.booking_request_id;
+            
+            	UPDATE booking_request_alerts 
+            	SET alert_description = v_anon_text
+            	WHERE booking_request_id = v_request_rec.booking_request_id;
+            
+            	UPDATE booking_request_contacts 
+            	SET contact_name = v_anon_text,
+	            	email = v_anon_text,
+	            	telephone_no = v_anon_text,
+	            	telephone_no2 =v_anon_text
+	            WHERE booking_request_id  = v_request_rec.booking_request_id;
+                
+	           IF v_anon_tp_req_ids = v_req_ref_text THEN
+        	        v_anon_tp_req_ids := v_anon_tp_req_ids || v_request_rec.third_party_booking_id;
+		       ELSE
+		            v_anon_tp_req_ids := v_anon_tp_req_ids || ', ' || v_request_rec.third_party_booking_id;
+        	   END IF;
+                
+	           v_taskCount = v_taskCount + 1;
+	           
+            END LOOP;
+           
+           IF v_anon_tp_task_ids = '' THEN
+		        v_anon_tp_task_ids := v_anon_tp_req_ids;
+		   ELSE
+		        v_anon_tp_task_ids := v_anon_tp_task_ids || ', ' || v_anon_tp_req_ids;
+		   END IF;
+    END IF;
+  
+	v_endTime := clock_timestamp();
+    v_timeDelta := 1000 * (extract(epoch FROM v_endTime) - extract(epoch FROM v_startTime));
+    INSERT INTO anonymisation_reports (report_title,
+        organisation_id,
+        processed_date,
+        processed_time,
+        tp_contact_id,
+        message_id,
+        process_outcome,
+        anon_entities,
+        failure_reason,
+        anon_record_count)
+    VALUES (v_anonReportTitle,
+        p_organisation_id::uuid,
+        v_currDt,
+        v_timeDelta,
+        p_contact_id,
+        NULL,
+        'SUCCESS',
+        v_anon_tp_task_ids,
+        NULL,
+        v_taskCount);
+    -- Perform updates
+   
+    -- Anonymise relevant transactional DB records
+    RETURN 'SUCCESS';
+EXCEPTION
+    WHEN sqlstate 'NOCOM' THEN
+        v_endTime := clock_timestamp();
+        v_timeDelta := 1000 * (extract(epoch FROM v_endTime) - extract(epoch FROM v_startTime));
+        INSERT INTO anonymisation_reports (report_title,
+            organisation_id,
+            processed_date,
+            processed_time,
+            tp_contact_id,
+            message_id,
+            process_outcome,
+            anon_entities,
+            failure_reason,
+            anon_record_count)
+        VALUES (v_anonReportTitle,
+            p_organisation_id::uuid,
+            v_currDt,
+            v_timeDelta,
+            p_contact_id,
+            NULL,
+            'FAILED',
+            v_anon_tp_task_ids,
+            v_anon_tp_task_ids || ' not made anonymous, because task is current.  Please review and recall task to remove',
+            0/*v_taskCount*/);
+           return 'FAILED';
+    WHEN OTHERS THEN
+        GET STACKED DIAGNOSTICS v_state = RETURNED_SQLSTATE,
+        v_msg = MESSAGE_TEXT,
+        v_detail = PG_EXCEPTION_DETAIL,
+        v_hint = PG_EXCEPTION_HINT,
+        v_context = PG_EXCEPTION_CONTEXT;
+raise notice E'Got exception:
+                         state  : %
+                         message: %
+                         detail : %
+                         hint   : %
+                         context: %', v_state, v_msg, v_detail, v_hint, v_context;
+v_diagnostics = 'Got exception:
+                         state  : ' || v_state || '
+                         message: ' || v_msg || '
+                         detail : ' || v_detail || '
+                         hint   : ' || v_hint || '
+                         context: ' || v_context;
+v_error = 'State = ' || v_state::text || ' , Error = ' || SQLERRM::text;
+-- send errors back to calling function. This should set the messages_in record to status E
+RETURN v_error || '####' || v_diagnostics;
+END;
+
+$function$
+;
+

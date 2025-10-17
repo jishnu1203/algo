@@ -1,0 +1,53 @@
+---- GRADLE ------
+
+gradle clean build                        ----> Go to project directory 
+./gradlew build && java -jar build/libs/transport-0.0.1-SNAPSHOT.jar  --> To run project without IDE
+
+---- DOCKER ------
+
+docker run ---> Is to spin up a new container 
+
+{-it}  ---> It is used for interactive mode. Keep me inside the terminal so that i can interact with the container. (samaj)
+
+docker run -it ubuntu --> Here It rana anew ubuntu container.
+docker run -it <IMAGE-NAME> 
+
+docker container ls  ---> Show all (runnning) container. 
+
+docker container ls -a  ---> shows all the container runnning or stopped 
+
+docker start {container Name/Id}  ---> To start the stopped container or to start the paticullar container.
+
+docker stop {container Name/Id}   ---> To stop the container.
+
+docker exec {container Name/Id} ls  ---> Here exec is (execute) the ls command. Here it tells the docker to execute ls command inside the container.
+docker exec <CONTAINER-NAME> <COMMAND>
+
+docker exec -it {container Name/Id} bash -> Interactive (-it) added to keep it inside the terminal.
+
+docker images  --> To check the images in the docker. NOT CONATINER talking about IMAGE().
+
+docker image ls  -->  same as above. To check the images in the docker. NOT CONATINER talking about IMAGE().
+
+{PORT-MAPPING} Container k andar ka port ko bhar ka port se link karo or else localhost:8080 marega to not found ayega
+docker run -it -p 9000:6000 <IMAGE-NAME>  ---> IT basically say mount my local port to your contatiner port and use 6000 container port to my local 9000 port.
+docker run -it -p <LOCAL-PORT>:<CONATINER-PORT> <IMAGE-NAME> 
+
+{ENVIRONMENT-VARIABLE} 
+docker run -it -p 9000:6000 -e {KEY=VALUE} -e {KEY=VALUE} <IMAGE-NAME> --> adding key value to comand for adding env variable
+
+***********
+docker file
+FROM 
+
+
+
+
+
+***********
+
+docker build -t <IMAGE-NAME> ----> FOR sping boot project 
+
+
+
+
